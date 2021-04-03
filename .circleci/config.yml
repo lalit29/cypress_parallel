@@ -1,0 +1,181 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/tmp
+    docker:
+      - image: 'cypress/base:10'
+        environment:
+          TERM: xterm
+    steps:
+      - checkout
+      - run: pwd
+      - run: ls
+      - restore_cache:
+          keys:
+            - 'v2-deps-{{ .Branch }}-{{ checksum "package-lock.json" }}'
+            - 'v2-deps-{{ .Branch }}-'
+            - v2-deps-
+      - run: npm ci
+      - save_cache:
+          key: 'v2-deps-{{ .Branch }}-{{ checksum "package-lock.json" }}'
+          paths:
+            - ~/.npm
+            - ~/.cache
+      - persist_to_workspace:
+          root: ~/
+          paths:
+            - .cache
+            - tmp
+  combine_reports:
+    working_directory: ~/tmp
+    docker:
+      - image: 'cypress/base:10'
+        environment:
+          TERM: xterm
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/
+      - attach_workspace:
+          at: /tmp/mochawesome-report
+      - run: ls /tmp/mochawesome-report
+      - run: node ./lib/combine.js
+      - store_artifacts:
+          path: mochareports
+  test1:
+    working_directory: ~/tmp
+    docker:
+      - image: 'cypress/base:10'
+        environment:
+          TERM: xterm
+    steps:
+      - attach_workspace:
+          at: ~/
+      - run: ls -la cypress
+      - run: ls -la cypress/integration
+      - run:
+          name: Running cypress tests 1
+          command: >-
+            if $(npm bin)/cypress run --spec cypress/integration/cura.spec.js
+            --reporter mochawesome --reporter-options "reportFilename=test1";
+            then echo 'pass'; else echo 'fail'; fi
+      - store_artifacts:
+          path: cypress/videos
+      - store_artifacts:
+          path: cypress/screenshots
+      - store_artifacts:
+          path: mochawesome-report
+      - persist_to_workspace:
+          root: mochawesome-report
+          paths:
+            - test1.json
+            - test1.html
+  test2:
+    working_directory: ~/tmp
+    docker:
+      - image: 'cypress/base:10'
+        environment:
+          TERM: xterm
+    steps:
+      - attach_workspace:
+          at: ~/
+      - run: ls -la cypress
+      - run: ls -la cypress/integration
+      - run:
+          name: Running cypress tests 2
+          command: >-
+            if $(npm bin)/cypress run --spec
+            cypress/integration/ht_Login.spec.js --reporter mochawesome
+            --reporter-options "reportFilename=test2"; then echo 'pass'; else
+            echo 'fail'; fi
+      - store_artifacts:
+          path: cypress/videos
+      - store_artifacts:
+          path: cypress/screenshots
+      - store_artifacts:
+          path: mochawesome-report
+      - persist_to_workspace:
+          root: mochawesome-report
+          paths:
+            - test2.json
+            - test2.html
+  test3:
+    working_directory: ~/tmp
+    docker:
+      - image: 'cypress/base:10'
+        environment:
+          TERM: xterm
+    steps:
+      - attach_workspace:
+          at: ~/
+      - run: ls -la cypress
+      - run: ls -la cypress/integration
+      - run:
+          name: Running cypress tests 3
+          command: >-
+            if $(npm bin)/cypress run --spec
+            cypress/integration/ht_Sign_up.spec.js --reporter mochawesome
+            --reporter-options "reportFilename=test3"; then echo 'pass'; else
+            echo 'fail'; fi
+      - store_artifacts:
+          path: cypress/videos
+      - store_artifacts:
+          path: cypress/screenshots
+      - store_artifacts:
+          path: mochawesome-report
+      - persist_to_workspace:
+          root: mochawesome-report
+          paths:
+            - test3.json
+            - test3.html
+  test4:
+    working_directory: ~/tmp
+    docker:
+      - image: 'cypress/base:10'
+        environment:
+          TERM: xterm
+    steps:
+      - attach_workspace:
+          at: ~/
+      - run: ls -la cypress
+      - run: ls -la cypress/integration
+      - run:
+          name: Running cypress tests 4
+          command: >-
+            if $(npm bin)/cypress run --spec cypress/integration/react.spec.js
+            --reporter mochawesome --reporter-options "reportFilename=test4";
+            then echo 'pass'; else echo 'fail'; fi
+      - store_artifacts:
+          path: cypress/videos
+      - store_artifacts:
+          path: cypress/screenshots
+      - store_artifacts:
+          path: mochawesome-report
+      - persist_to_workspace:
+          root: mochawesome-report
+          paths:
+            - test4.json
+            - test4.html
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build
+      - test1:
+          requires:
+            - build
+      - test2:
+          requires:
+            - build
+      - test3:
+          requires:
+            - build
+      - test4:
+          requires:
+            - build
+      - combine_reports:
+          requires:
+            - test1
+            - test2
+            - test3
+            - test4
