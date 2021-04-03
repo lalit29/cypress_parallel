@@ -1,0 +1,108 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-04-03T14:22:10.999Z",
+    "end": "2021-04-03T14:22:29.382Z",
+    "duration": 18383,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "233e74db-a64c-4acd-9f7c-619f8c67e2e4",
+      "title": "",
+      "fullFile": "cypress/integration/ht_Login.spec.js",
+      "file": "cypress/integration/ht_Login.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7184e40e-6e2e-40e1-b11f-76e7c6f25d89",
+          "title": "Hometown Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify login",
+              "fullTitle": "Hometown Login Verify login",
+              "timedOut": null,
+              "duration": 15220,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "\"videos/ht_Login.spec.js.mp4\"",
+              "code": "// cy.visit('https://www.hometown.in/login/?redirect=/');\ncy.visit(Cypress.env('hometown'));\ncy.viewport('macbook-15');\ncy.get('input[class=\"sc-hzDkRC kBHiNu\"]').first().type('lalit@hometown.in');\ncy.get('input[class=\"sc-hzDkRC kBHiNu\"]').last().type('1234567');\ncy.get('button').contains('SIGN IN').click();\ncy.wait(2000);\ncy.get('div[class=\"sc-kpOJdX bHlFQp\"]').contains('Rajajaja'); // cy.wait(2000)\n//cy.contains('Rajajaja').first().click()\n//  cy.get('button').contains('Logout !').trigger('mouseover')\n// })",
+              "err": {
+                "message": "AssertionError: Timed out retrying: Expected to find content: 'Rajajaja' within the element: <div.sc-kpOJdX.bHlFQp> but never did.",
+                "estack": "AssertionError: Timed out retrying: Expected to find content: 'Rajajaja' within the element: <div.sc-kpOJdX.bHlFQp> but never did.\n    at Context.eval (https://www.hometown.in/__cypress/tests?p=cypress/integration/ht_Login.spec.js:13:45)",
+                "diff": null
+              },
+              "uuid": "372701a2-cf73-40c8-a0b6-6a6f5eb48418",
+              "parentUUID": "7184e40e-6e2e-40e1-b11f-76e7c6f25d89",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "372701a2-cf73-40c8-a0b6-6a6f5eb48418"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 15220,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

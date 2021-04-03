@@ -1,0 +1,108 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-04-03T14:24:24.947Z",
+    "end": "2021-04-03T14:24:44.204Z",
+    "duration": 19257,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "693ddd50-89de-4984-9ea7-8d3b67cf38db",
+      "title": "",
+      "fullFile": "cypress/integration/ht_Login.spec.js",
+      "file": "cypress/integration/ht_Login.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "97b1cc94-979f-42ca-bd44-87e00deed05c",
+          "title": "Hometown Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify login",
+              "fullTitle": "Hometown Login Verify login",
+              "timedOut": null,
+              "duration": 16307,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "\"videos/ht_Login.spec.js.mp4\"",
+              "code": "// cy.visit('https://www.hometown.in/login/?redirect=/');\ncy.visit(Cypress.env('hometown'));\ncy.viewport('macbook-15');\ncy.get('input[class=\"sc-hzDkRC kBHiNu\"]').first().type('lalit@hometown.in');\ncy.get('input[class=\"sc-hzDkRC kBHiNu\"]').last().type('1234567');\ncy.get('button').contains('SIGN IN').click();\ncy.wait(2000);\ncy.get('div[class=\"sc-kpOJdX bHlFQp\"]').contains('Rajajaja'); // cy.wait(2000)\n//cy.contains('Rajajaja').first().click()\n//  cy.get('button').contains('Logout !').trigger('mouseover')\n// })",
+              "err": {
+                "message": "AssertionError: Timed out retrying: Expected to find content: 'Rajajaja' within the element: <div.sc-kpOJdX.bHlFQp> but never did.",
+                "estack": "AssertionError: Timed out retrying: Expected to find content: 'Rajajaja' within the element: <div.sc-kpOJdX.bHlFQp> but never did.\n    [1]</</<@https://www.hometown.in/__cypress/tests?p=cypress/integration/ht_Login.spec.js:13:45\n    setRunnable/runnable.fn@https://www.hometown.in/__cypress/runner/cypress_runner.js:167950:45\n    callFn@https://www.hometown.in/__cypress/runner/cypress_runner.js:103279:21\n    onRunnableRun/<@https://www.hometown.in/__cypress/runner/cypress_runner.js:173107:28\n    finallyHandler@https://www.hometown.in/__cypress/runner/cypress_runner.js:6715:23\n    tryCatcher@https://www.hometown.in/__cypress/runner/cypress_runner.js:10161:23\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromiseFromHandler@https://www.hometown.in/__cypress/runner/cypress_runner.js:8096:31\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromise@https://www.hometown.in/__cypress/runner/cypress_runner.js:8153:18\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromise0@https://www.hometown.in/__cypress/runner/cypress_runner.js:8198:10\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromises@https://www.hometown.in/__cypress/runner/cypress_runner.js:8278:18\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._fulfill@https://www.hometown.in/__cypress/runner/cypress_runner.js:8222:18\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromise@https://www.hometown.in/__cypress/runner/cypress_runner.js:8166:21\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromise0@https://www.hometown.in/__cypress/runner/cypress_runner.js:8198:10\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromises@https://www.hometown.in/__cypress/runner/cypress_runner.js:8278:18\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._fulfill@https://www.hometown.in/__cypress/runner/cypress_runner.js:8222:18\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._resolveCallback@https://www.hometown.in/__cypress/runner/cypress_runner.js:8016:57\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromiseFromHandler@https://www.hometown.in/__cypress/runner/cypress_runner.js:8108:17\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromise@https://www.hometown.in/__cypress/runner/cypress_runner.js:8153:18\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromise0@https://www.hometown.in/__cypress/runner/cypress_runner.js:8198:10\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromises@https://www.hometown.in/__cypress/runner/cypress_runner.js:8278:18\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._fulfill@https://www.hometown.in/__cypress/runner/cypress_runner.js:8222:18\n    ../../node_modules/bluebird/js/release/promise_array.js/module.exports/PromiseArray.prototype._resolve@https://www.hometown.in/__cypress/runner/cypress_runner.js:8495:19\n    ../../node_modules/bluebird/js/release/promise_array.js/module.exports/PromiseArray.prototype._promiseFulfilled@https://www.hometown.in/__cypress/runner/cypress_runner.js:8513:14\n    ../../node_modules/bluebird/js/release/promise_array.js/module.exports/PromiseArray.prototype._iterate@https://www.hometown.in/__cypress/runner/cypress_runner.js:8483:31\n    init@https://www.hometown.in/__cypress/runner/cypress_runner.js:8447:10\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromise@https://www.hometown.in/__cypress/runner/cypress_runner.js:8150:21\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromise0@https://www.hometown.in/__cypress/runner/cypress_runner.js:8198:10\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromises@https://www.hometown.in/__cypress/runner/cypress_runner.js:8278:18\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._fulfill@https://www.hometown.in/__cypress/runner/cypress_runner.js:8222:18\n    ../../node_modules/bluebird/js/release/promise_array.js/module.exports/PromiseArray.prototype._resolve@https://www.hometown.in/__cypress/runner/cypress_runner.js:8495:19\n    ../../node_modules/bluebird/js/release/promise_array.js/module.exports/PromiseArray.prototype._promiseFulfilled@https://www.hometown.in/__cypress/runner/cypress_runner.js:8513:14\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromise@https://www.hometown.in/__cypress/runner/cypress_runner.js:8158:26\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromise0@https://www.hometown.in/__cypress/runner/cypress_runner.js:8198:10\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromises@https://www.hometown.in/__cypress/runner/cypress_runner.js:8278:18\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._fulfill@https://www.hometown.in/__cypress/runner/cypress_runner.js:8222:18\n    ../../node_modules/bluebird/js/release/promise_array.js/module.exports/PromiseArray.prototype._resolve@https://www.hometown.in/__cypress/runner/cypress_runner.js:8495:19\n    ../../node_modules/bluebird/js/release/map.js/module.exports/MappingPromiseArray.prototype._promiseFulfilled@https://www.hometown.in/__cypress/runner/cypress_runner.js:7321:18\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromise@https://www.hometown.in/__cypress/runner/cypress_runner.js:8158:26\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromise0@https://www.hometown.in/__cypress/runner/cypress_runner.js:8198:10\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromises@https://www.hometown.in/__cypress/runner/cypress_runner.js:8278:18\n    _drainQueueStep@https://www.hometown.in/__cypress/runner/cypress_runner.js:4868:12\n    _drainQueue@https://www.hometown.in/__cypress/runner/cypress_runner.js:4861:24\n    ../../node_modules/bluebird/js/release/async.js/</Async.prototype._drainQueues@https://www.hometown.in/__cypress/runner/cypress_runner.js:4877:16\n    Async/this.drainQueues@https://www.hometown.in/__cypress/runner/cypress_runner.js:4747:14\n",
+                "diff": null
+              },
+              "uuid": "cd1bea5a-a1d0-4d3c-8b7b-a484080373e8",
+              "parentUUID": "97b1cc94-979f-42ca-bd44-87e00deed05c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "cd1bea5a-a1d0-4d3c-8b7b-a484080373e8"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 16307,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

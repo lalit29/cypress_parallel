@@ -1,7 +1,9 @@
 describe('Hometown Login', function () {
 
     it('Verify login',function (){
-     cy.visit('https://www.hometown.in/login/?redirect=/');
+    // cy.visit('https://www.hometown.in/login/?redirect=/');
+     cy.visit(Cypress.env('hometown'))
+     cy.viewport('macbook-15');
      cy.get('input[class="sc-hzDkRC kBHiNu"]').first().type('lalit@hometown.in');
      cy.get('input[class="sc-hzDkRC kBHiNu"]').last().type('1234567');
      cy.get('button').contains('SIGN IN').click();

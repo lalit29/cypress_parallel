@@ -5,5 +5,9 @@
         "html": false,
         "json": true
     },
-    "retries": 1
+    "retries": 1,
+    "env": {
+        "hometown": "https://www.hometown.in/login/?redirect=/",
+        "stage": "/products"
+      }
 }

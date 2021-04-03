@@ -1,0 +1,108 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-04-03T14:22:37.262Z",
+    "end": "2021-04-03T14:22:54.169Z",
+    "duration": 16907,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "6c67fb0e-5df1-42e1-b15c-9f12a533b023",
+      "title": "",
+      "fullFile": "cypress/integration/ht_Sign_up.spec.js",
+      "file": "cypress/integration/ht_Sign_up.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c48dc14b-38cf-4a41-a0d4-f40b9d72fc41",
+          "title": "Hometown Sign up",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "verify Sign up",
+              "fullTitle": "Hometown Sign up verify Sign up",
+              "timedOut": null,
+              "duration": 14410,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "\"videos/ht_Sign_up.spec.js.mp4\"",
+              "code": "// cy.visit('https://www.hometown.in/login/?redirect=/');\ncy.visit(Cypress.env('hometown'));\ncy.viewport('macbook-15');\ncy.get('a').contains('Register').click();\ncy.get('input[name=\"full name\"]').type(userID_Alpha());\ncy.get('input[name=\"email\"]').type(userID_Alpha() + '@gmail.com');\ncy.get('input[name=\"phone\"]').type(user_Mob());\ncy.get('input[name=\"psaaword\"]').type('123456');\ncy.get('input[id=\"readTnc\"]').click();\ncy.get('button').contains('SIGN UP').click();\ncy.get('h2').contains('Profile Details');",
+              "err": {
+                "message": "TypeError: The following error originated from your application code, not from Cypress.\n\n  > Cannot read property 'length' of undefined\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "TypeError: The following error originated from your application code, not from Cypress.\n\n  > Cannot read property 'length' of undefined\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at https://libraries.unbxdapi.com/prod-hometown808961566375586_autosuggest.js:1:158009\n    at dispatch (https://libraries.unbxdapi.com/prod-hometown808961566375586_search.js:1:40356)\n    at f.handle (https://libraries.unbxdapi.com/prod-hometown808961566375586_search.js:1:37072)\n    at nrWrapper (https://www.hometown.in/login/?redirect=/:83:11808)",
+                "diff": null
+              },
+              "uuid": "a6c33471-6597-4aef-9455-6a38f211d705",
+              "parentUUID": "c48dc14b-38cf-4a41-a0d4-f40b9d72fc41",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "a6c33471-6597-4aef-9455-6a38f211d705"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 14410,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

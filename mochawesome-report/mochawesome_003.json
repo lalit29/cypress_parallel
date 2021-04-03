@@ -1,0 +1,174 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 1,
+    "pending": 0,
+    "failures": 3,
+    "start": "2021-04-03T14:24:00.202Z",
+    "end": "2021-04-03T14:24:17.334Z",
+    "duration": 17132,
+    "testsRegistered": 4,
+    "passPercent": 25,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "42fa5f87-fcf9-436c-b149-655c993bbe84",
+      "title": "",
+      "fullFile": "cypress/integration/cura.spec.js",
+      "file": "cypress/integration/cura.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a6b47a57-ee19-4038-beb6-97da68b5521f",
+          "title": "Cura Make Appointment",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Visit the URL",
+              "fullTitle": "Cura Make Appointment Visit the URL",
+              "timedOut": null,
+              "duration": 3059,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "\"videos/cura.spec.js.mp4\"",
+              "code": "// cy.visit(Cypress.env('baseUrl'));\ncy.visit('https://katalon-demo-cura.herokuapp.com/');",
+              "err": {},
+              "uuid": "7a6d5ede-fec5-4ef9-a4da-47d666d2c583",
+              "parentUUID": "a6b47a57-ee19-4038-beb6-97da68b5521f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Click on Make Appointment",
+              "fullTitle": "Cura Make Appointment Click on Make Appointment",
+              "timedOut": null,
+              "duration": 844,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "\"videos/cura.spec.js.mp4\"",
+              "code": "cy.get('#btn-make-appointment').click();\ncy.get('#txt-username').type('John Doe');\ncy.get('#txt-password').type('ThisIsNotAPassword');\ncy.get('#btn-login').click();",
+              "err": {
+                "message": "TypeError: Cannot read property 'isAttached' of undefined",
+                "estack": "TypeError: Cannot read property 'isAttached' of undefined\n    at /Users/Lalit/Library/Caches/Cypress/4.9.0/Cypress.app/Contents/Resources/app/packages/server/lib/browsers/firefox-util.js:117:20\n    at tryCatcher (/Users/Lalit/Library/Caches/Cypress/4.9.0/Cypress.app/Contents/Resources/app/packages/server/node_modules/bluebird/js/release/util.js:16:23)\n    at /Users/Lalit/Library/Caches/Cypress/4.9.0/Cypress.app/Contents/Resources/app/packages/server/node_modules/bluebird/js/release/method.js:15:34\n    at /Users/Lalit/Library/Caches/Cypress/4.9.0/Cypress.app/Contents/Resources/app/packages/server/lib/browsers/firefox-util.js:235:40\n    at tryCatcher (/Users/Lalit/Library/Caches/Cypress/4.9.0/Cypress.app/Contents/Resources/app/packages/server/node_modules/bluebird/js/release/util.js:16:23)\n    at Promise._settlePromiseFromHandler (/Users/Lalit/Library/Caches/Cypress/4.9.0/Cypress.app/Contents/Resources/app/packages/server/node_modules/bluebird/js/release/promise.js:547:31)\n    at Promise._settlePromise (/Users/Lalit/Library/Caches/Cypress/4.9.0/Cypress.app/Contents/Resources/app/packages/server/node_modules/bluebird/js/release/promise.js:604:18)\n    at Promise._settlePromise0 (/Users/Lalit/Library/Caches/Cypress/4.9.0/Cypress.app/Contents/Resources/app/packages/server/node_modules/bluebird/js/release/promise.js:649:10)\n    at Promise._settlePromises (/Users/Lalit/Library/Caches/Cypress/4.9.0/Cypress.app/Contents/Resources/app/packages/server/node_modules/bluebird/js/release/promise.js:729:18)\n    at _drainQueueStep (/Users/Lalit/Library/Caches/Cypress/4.9.0/Cypress.app/Contents/Resources/app/packages/server/node_modules/bluebird/js/release/async.js:93:12)\n    at _drainQueue (/Users/Lalit/Library/Caches/Cypress/4.9.0/Cypress.app/Contents/Resources/app/packages/server/node_modules/bluebird/js/release/async.js:86:9)\n    at Async._drainQueues (/Users/Lalit/Library/Caches/Cypress/4.9.0/Cypress.app/Contents/Resources/app/packages/server/node_modules/bluebird/js/release/async.js:102:5)\n    at Immediate.Async.drainQueues [as _onImmediate] (/Users/Lalit/Library/Caches/Cypress/4.9.0/Cypress.app/Contents/Resources/app/packages/server/node_modules/bluebird/js/release/async.js:15:14)\n    at processImmediate (internal/timers.js:439:21)\n",
+                "diff": null
+              },
+              "uuid": "86481cc5-d6ac-4e25-975d-c2ff82ed0f7e",
+              "parentUUID": "a6b47a57-ee19-4038-beb6-97da68b5521f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Make Appointment",
+              "fullTitle": "Cura Make Appointment Make Appointment",
+              "timedOut": null,
+              "duration": 4685,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "\"videos/cura.spec.js.mp4\"",
+              "code": "cy.get('select').select('Hongkong CURA Healthcare Center');\ncy.get('#chk_hospotal_readmission').click();\ncy.get('#radio_program_medicaid').click();\ncy.get('#txt_visit_date').type('30/03/2020');\ncy.get('#txt_comment').click({\n  force: true\n});\ncy.get('#txt_comment').type('Pramod Dutta will be avaiable at 30/03/2020');\ncy.get('#btn-book-appointment').click();",
+              "err": {
+                "message": "AssertionError: Timed out retrying: Expected to find element: `select`, but never found it.",
+                "estack": "AssertionError: Timed out retrying: Expected to find element: `select`, but never found it.\n    [1]</</<@https://katalon-demo-cura.herokuapp.com/__cypress/tests?p=cypress/integration/cura.spec.js:16:8\n    setRunnable/runnable.fn@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:167950:45\n    callFn@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:103279:21\n    onRunnableRun/<@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:173107:28\n    finallyHandler@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:6715:23\n    tryCatcher@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:10161:23\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromiseFromHandler@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:8096:31\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromise@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:8153:18\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromise0@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:8198:10\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromises@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:8278:18\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._fulfill@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:8222:18\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromise@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:8166:21\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromise0@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:8198:10\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromises@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:8278:18\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._fulfill@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:8222:18\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._resolveCallback@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:8016:57\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromiseFromHandler@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:8108:17\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromise@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:8153:18\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromise0@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:8198:10\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromises@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:8278:18\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._fulfill@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:8222:18\n    ../../node_modules/bluebird/js/release/promise_array.js/module.exports/PromiseArray.prototype._resolve@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:8495:19\n    ../../node_modules/bluebird/js/release/promise_array.js/module.exports/PromiseArray.prototype._promiseFulfilled@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:8513:14\n    ../../node_modules/bluebird/js/release/promise_array.js/module.exports/PromiseArray.prototype._iterate@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:8483:31\n    init@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:8447:10\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromise@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:8150:21\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromise0@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:8198:10\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromises@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:8278:18\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._fulfill@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:8222:18\n    ../../node_modules/bluebird/js/release/promise_array.js/module.exports/PromiseArray.prototype._resolve@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:8495:19\n    ../../node_modules/bluebird/js/release/promise_array.js/module.exports/PromiseArray.prototype._promiseFulfilled@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:8513:14\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromise@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:8158:26\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromise0@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:8198:10\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromises@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:8278:18\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._fulfill@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:8222:18\n    ../../node_modules/bluebird/js/release/promise_array.js/module.exports/PromiseArray.prototype._resolve@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:8495:19\n    ../../node_modules/bluebird/js/release/map.js/module.exports/MappingPromiseArray.prototype._promiseFulfilled@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:7321:18\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromise@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:8158:26\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromise0@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:8198:10\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromises@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:8278:18\n    _drainQueueStep@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:4868:12\n    _drainQueue@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:4861:24\n    ../../node_modules/bluebird/js/release/async.js/</Async.prototype._drainQueues@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:4877:16\n    Async/this.drainQueues@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:4747:14\n",
+                "diff": null
+              },
+              "uuid": "9d9d1bd1-9bd1-4970-8ed8-445e835d10fc",
+              "parentUUID": "a6b47a57-ee19-4038-beb6-97da68b5521f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify Appointment",
+              "fullTitle": "Cura Make Appointment Verify Appointment",
+              "timedOut": null,
+              "duration": 4895,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "\"videos/cura.spec.js.mp4\"",
+              "code": "cy.get('h2').contains('Appointment Confirmation');\ncy.get('#comment').contains('Pramod Dutta will be avaiable at 30/03/2020');",
+              "err": {
+                "message": "AssertionError: Timed out retrying: Expected to find element: `h2`, but never found it.",
+                "estack": "AssertionError: Timed out retrying: Expected to find element: `h2`, but never found it.\n    [1]</</<@https://katalon-demo-cura.herokuapp.com/__cypress/tests?p=cypress/integration/cura.spec.js:27:8\n    setRunnable/runnable.fn@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:167950:45\n    callFn@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:103279:21\n    onRunnableRun/<@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:173107:28\n    finallyHandler@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:6715:23\n    tryCatcher@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:10161:23\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromiseFromHandler@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:8096:31\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromise@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:8153:18\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromise0@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:8198:10\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromises@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:8278:18\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._fulfill@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:8222:18\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromise@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:8166:21\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromise0@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:8198:10\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromises@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:8278:18\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._fulfill@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:8222:18\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._resolveCallback@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:8016:57\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromiseFromHandler@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:8108:17\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromise@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:8153:18\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromise0@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:8198:10\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromises@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:8278:18\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._fulfill@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:8222:18\n    ../../node_modules/bluebird/js/release/promise_array.js/module.exports/PromiseArray.prototype._resolve@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:8495:19\n    ../../node_modules/bluebird/js/release/promise_array.js/module.exports/PromiseArray.prototype._promiseFulfilled@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:8513:14\n    ../../node_modules/bluebird/js/release/promise_array.js/module.exports/PromiseArray.prototype._iterate@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:8483:31\n    init@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:8447:10\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromise@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:8150:21\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromise0@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:8198:10\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromises@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:8278:18\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._fulfill@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:8222:18\n    ../../node_modules/bluebird/js/release/promise_array.js/module.exports/PromiseArray.prototype._resolve@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:8495:19\n    ../../node_modules/bluebird/js/release/promise_array.js/module.exports/PromiseArray.prototype._promiseFulfilled@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:8513:14\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromise@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:8158:26\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromise0@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:8198:10\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromises@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:8278:18\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._fulfill@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:8222:18\n    ../../node_modules/bluebird/js/release/promise_array.js/module.exports/PromiseArray.prototype._resolve@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:8495:19\n    ../../node_modules/bluebird/js/release/map.js/module.exports/MappingPromiseArray.prototype._promiseFulfilled@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:7321:18\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromise@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:8158:26\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromise0@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:8198:10\n    ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromises@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:8278:18\n    _drainQueueStep@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:4868:12\n    _drainQueue@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:4861:24\n    ../../node_modules/bluebird/js/release/async.js/</Async.prototype._drainQueues@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:4877:16\n    Async/this.drainQueues@https://katalon-demo-cura.herokuapp.com/__cypress/runner/cypress_runner.js:4747:14\n",
+                "diff": null
+              },
+              "uuid": "bd3096d5-7748-45d7-baba-54619e0e4ae4",
+              "parentUUID": "a6b47a57-ee19-4038-beb6-97da68b5521f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "7a6d5ede-fec5-4ef9-a4da-47d666d2c583"
+          ],
+          "failures": [
+            "86481cc5-d6ac-4e25-975d-c2ff82ed0f7e",
+            "9d9d1bd1-9bd1-4970-8ed8-445e835d10fc",
+            "bd3096d5-7748-45d7-baba-54619e0e4ae4"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 13483,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

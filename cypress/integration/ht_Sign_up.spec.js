@@ -3,7 +3,8 @@ describe('Hometown Sign up', function () {
 
     it('verify Sign up',function (){
 
-        cy.visit('https://www.hometown.in/login/?redirect=/');
+       // cy.visit('https://www.hometown.in/login/?redirect=/');
+        cy.visit(Cypress.env('hometown'))
         cy.viewport('macbook-15');
         cy.get('a').contains('Register').click();
         cy.get('input[name="full name"]').type(userID_Alpha())
